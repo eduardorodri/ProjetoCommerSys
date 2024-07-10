@@ -34,8 +34,7 @@ git clone https://github.com/eduardorodri/ProjetoCommerSys
 dotnet restore
 ```
 3. Atualize as configurações do banco de dados em appsettings.json conforme necessário. 
-```
-```
+<br>
 4. Aplique as migrações do Entity Framework:
 ```
 dotnet ef database update
