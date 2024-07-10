@@ -24,10 +24,11 @@ O CommerSys é um sistema de gerenciamento de departamentos de vendas desenvolvi
 - Relatório de Vendas: Visualização das vendas realizadas por cada vendedor e total por setor.
 
 ## Instalação
-
+```
 1. Clone o repositório:
-git clone
+git clone https://github.com/eduardorodri/ProjetoCommerSys
 
+```
 2. Restaure os pacotes NuGet:
 dotnet restore
 
