@@ -30,14 +30,18 @@ O CommerSys é um sistema de gerenciamento de departamentos de vendas desenvolvi
 git clone https://github.com/eduardorodri/ProjetoCommerSys
 ```
 2. Restaure os pacotes NuGet:
+```
 dotnet restore
-
+```
 3. Atualize as configurações do banco de dados em appsettings.json conforme necessário.
 
 4. Aplique as migrações do Entity Framework:
+```
 dotnet ef database update
-
+```
 5. Execute o projeto:
+```
 dotnet run
+```
 
 
