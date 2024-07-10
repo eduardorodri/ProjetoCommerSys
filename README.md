@@ -27,10 +27,10 @@ O CommerSys é um sistema de gerenciamento de departamentos de vendas desenvolvi
 
 ProjetoInterdisciplinar/
 ├── Controllers/
-│   ├── DepartmentsController.cs
-│   ├── HomeController.cs
-│   ├── SalesRecordsController.cs
-│   ├── SellersController.cs
+│├── DepartmentsController.cs
+│├── HomeController.cs
+│├── SalesRecordsController.cs
+│├── SellersController.cs
 ├── Data/
 │   ├── ProjetoInterdisciplinarContext.cs
 │   ├── SeedingService.cs
