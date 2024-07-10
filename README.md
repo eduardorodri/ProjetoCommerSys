@@ -23,7 +23,7 @@ O CommerSys é um sistema de gerenciamento de departamentos de vendas desenvolvi
   
 - Relatório de Vendas: Visualização das vendas realizadas por cada vendedor e total por setor.
 
-Estrutura do Projeto
+## Estrutura do Projeto
 
 ProjetoInterdisciplinar/
 ├── Controllers/
