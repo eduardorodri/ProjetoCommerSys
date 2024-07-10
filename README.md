@@ -44,8 +44,8 @@ dotnet run
 
 #### Atualize as configurações do banco de dados em appsettings.json conforme necessário. 
 
-## Autor
 
+## Autor
 Este projeto foi desenvolvido por <strong> Eduardo Rodrigues Silva <strong>
 
 
