@@ -3,7 +3,7 @@
 ## Descrição
 O CommerSys é um sistema de gerenciamento de departamentos de vendas desenvolvido com ASP.NET Core 2.1. O sistema permite cadastrar vendedores, criar novos departamentos de vendas, verificar todas as vendas realizadas e mostrar quanto cada setor vendeu no mês.
 
-##Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 - ASP.NET Core 2.1
 
