@@ -1,0 +1,78 @@
+﻿@model IEnumerable<ProjetoInterdisciplinar.Models.SalesRecord>
+
+@{
+    ViewData["Title"] = "Busca Simplificada";
+    var totalVendas = Model.Sum(obj => obj.Quantia).ToString("C", System.Globalization.CultureInfo.GetCultureInfo("pt-BR"));
+}
+<br>
+<br>
+<br>
+<br>
+<h2 class="text-center my-4">@ViewData["Title"]</h2>
+
+<div class="container">
+    <form asp-action="SimpleSearch" class="form-inline mb-4">
+        <div class="form-group">
+            <label for="minDate" class="mr-2">Data Inicial</label>
+            <input type="date" class="form-control" name="minDate" value="@ViewData["minDate"]" />
+        </div>
+        <div class="form-group ml-3">
+            <label for="maxDate" class="mr-2">Data Final</label>
+            <input type="date" class="form-control" name="maxDate" value="@ViewData["maxDate"]" />
+        </div>
+        <button type="submit" class="btn btn-primary ml-3">Filtrar</button>
+    </form>
+    <br>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">Total de Vendas = <span class="text-info">@totalVendas</span></h3>
+        </div>
+        <div class="panel-body">
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr class="thead-dark">
+                        <th>@Html.DisplayNameFor(model => model.Id)</th>
+                        <th>@Html.DisplayNameFor(model => model.Data)</th>
+                        <th>@Html.DisplayNameFor(model => model.Vendedor.Nome)</th>
+                        <th>@Html.DisplayNameFor(model => model.Vendedor.Departamento.Name)</th>
+                        <th>@Html.DisplayNameFor(model => model.Quantia)</th>
+                        <th>@Html.DisplayNameFor(model => model.Status)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model) {
+                        <tr>
+                            <td>@Html.DisplayFor(modelItem => item.Id)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Data)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Vendedor.Nome)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Vendedor.Departamento.Name)</td>
+                            <td>@item.Quantia.ToString("C", System.Globalization.CultureInfo.GetCultureInfo("pt-BR"))</td>
+                            <td>@Html.DisplayFor(modelItem => item.Status)</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<style>
+    h2 {
+        color: #343a40;
+    }
+
+    .panel-heading {
+        background-color: #337ab7;
+        color: #fff;
+    }
+
+    .panel-title {
+        font-weight: bold;
+        font-size: 1.7rem;
+    }
+
+    .text-info {
+        font-size: 1.6rem;
+        color: white;
+    }
+</style>

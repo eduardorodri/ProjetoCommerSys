@@ -1,0 +1,81 @@
+﻿@model ProjetoInterdisciplinar.Models.ViewModels.SellerFormViewModel
+
+@{
+    ViewData["Title"] = "Criar";
+}
+<br>
+<br>
+<br>
+<br>
+<h2>@ViewData["Title"]</h2>
+
+<h4 class="mb-4">Vendedor</h4>
+<hr />
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="Create">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Seller.Nome" class="control-label"></label>
+                <input asp-for="Seller.Nome" class="form-control" placeholder="Digite o nome" />
+                <span asp-validation-for="Seller.Nome" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Seller.Email" class="control-label"></label>
+                <input asp-for="Seller.Email" class="form-control" placeholder="Digite o email" />
+                <span asp-validation-for="Seller.Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Seller.Nascimento" class="control-label"></label>
+                <input asp-for="Seller.Nascimento" class="form-control" placeholder="DD/MM/AAAA" />
+                <span asp-validation-for="Seller.Nascimento" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Seller.SalarioBase" class="control-label"></label>
+                <input asp-for="Seller.SalarioBase" class="form-control" placeholder="Digite o salário" />
+                <span asp-validation-for="Seller.SalarioBase" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Seller.DepartmentId" class="control-label"></label>
+                <select asp-for="Seller.DepartmentId" asp-items="@(new SelectList(Model.Departments, "Id", "Name"))" class="form-control">
+                    <option value="">Selecione o departamento</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Criar" class="btn btn-success" />
+                <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+            </div>
+        </form>
+    </div>
+</div>
+<br>
+<br>
+<br>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+
+<style>
+    h2 {
+        color: #343a40;
+    }
+
+    .btn {
+        margin-right: 10px;
+    }
+
+    .alert-danger {
+        margin-top: 20px;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    input::placeholder {
+        font-style: italic;
+        color: #6c757d;
+    }
+</style>

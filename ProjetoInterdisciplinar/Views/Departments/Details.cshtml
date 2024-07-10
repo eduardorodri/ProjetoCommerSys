@@ -1,0 +1,47 @@
+﻿@model ProjetoInterdisciplinar.Models.Department
+
+@{
+    ViewData["Title"] = "Detalhes";
+}
+<br>
+<br>
+<br>
+<br>
+<h2 class="my-4">Visualizar Detalhes</h2>
+
+<div class="card mb-3">
+    <div class="card-body">
+        <h4 class="card-title">Departamento:</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>@Html.DisplayNameFor(model => model.Name)</dt>
+            <dd>@Html.DisplayFor(model => model.Name)</dd>
+        </dl>
+    </div>
+</div>
+
+<div>
+    <br>
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Editar</a>
+    <a asp-action="Index" class="btn btn-secondary">Voltar para lista</a>
+</div>
+
+<style>
+    h2, h4 {
+        color: #343a40;
+    }
+
+    .btn {
+        margin-right: 10px;
+    }
+
+    .card {
+        width: 100%;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+    }
+
+    .card-body {
+        padding: 20px;
+    }
+</style>

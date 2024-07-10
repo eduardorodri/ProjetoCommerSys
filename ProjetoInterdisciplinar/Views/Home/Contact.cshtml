@@ -1,0 +1,81 @@
+﻿@{
+    ViewData["Title"] = "Contato";
+}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Página de Contato - Entre em contato com a equipe CommerSys">
+    <meta name="keywords" content="contato, suporte, ajuda, CommerSys">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"] - Site de Departamentos</title>
+    <link rel="stylesheet" href="~/css/custom.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-paper/3.3.4/css/bootstrap-paper.min.css">
+    <style>
+        .panel-heading {
+            background-color: #222 !important;
+            color: #fff !important;
+        }
+
+        .panel-primary {
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="page-header">
+                <h1 class="site-title text-center">Entre em contato com a equipe CommerSys</h1>
+            </div>
+            <section class="page-section clearfix">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h2 class="panel-title">Informações de Contato</h2>
+                            </div>
+                            <div class="panel-body">
+                                <p>Para dúvidas, sugestões ou suporte, entre em contato conosco através dos seguintes meios:</p>
+                                <br>
+                                <ul class="list-unstyled">
+                                    <li><strong>Email:</strong> suporte@commersys.com</li>
+                                    <li><strong>Telefone:</strong> (66) 99613-5323</li>
+                                    <li><strong>Endereço:</strong> Avenida Tarumãs, 123 - Sinop, MT</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="panel panel-success">
+                            <div class="panel-heading">
+                                <h2 class="panel-title">Tire qualquer dúvida, nos envie uma mensagem: </h2>
+                            </div>
+                            <div class="panel-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="name">Nome Completo</label>
+                                        <input type="text" class="form-control" id="name" placeholder="Seu nome">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email">Email</label>
+                                        <input type="email" class="form-control" id="email" placeholder="Seu email">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="message">Mensagem</label>
+                                        <textarea class="form-control" id="message" rows="5" placeholder="Sua mensagem"></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary btn-block">Enviar</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

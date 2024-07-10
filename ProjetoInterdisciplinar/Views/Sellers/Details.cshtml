@@ -1,0 +1,78 @@
+﻿@model ProjetoInterdisciplinar.Models.Seller
+
+@{
+    ViewData["Title"] = "Detalhes";
+    var formattedNascimento = Model.Nascimento.ToString("dd/MM/yyyy");
+    var formattedSalarioBase = Model.SalarioBase.ToString("C", System.Globalization.CultureInfo.CurrentCulture);
+}
+<br>
+<br>
+<br>
+<br>
+<h2>@ViewData["Title"]</h2>
+
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title">Vendedor</h4>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-3">
+                @Html.DisplayNameFor(model => model.Nome)
+            </dt>
+            <dd class="col-sm-9">
+                @Html.DisplayFor(model => model.Nome)
+            </dd>
+            <dt class="col-sm-3">
+                @Html.DisplayNameFor(model => model.Email)
+            </dt>
+            <dd class="col-sm-9">
+                @Html.DisplayFor(model => model.Email)
+            </dd>
+            <dt class="col-sm-3">
+                @Html.DisplayNameFor(model => model.Nascimento)
+            </dt>
+            <dd class="col-sm-9">
+                @formattedNascimento
+            </dd>
+            <dt class="col-sm-3">
+                @Html.DisplayNameFor(model => model.SalarioBase)
+            </dt>
+            <dd class="col-sm-9">
+                @formattedSalarioBase
+            </dd>
+            <dt class="col-sm-3">
+                @Html.DisplayNameFor(model => model.Departamento)
+            </dt>
+            <dd class="col-sm-9">
+                @Html.DisplayFor(model => model.Departamento.Name)
+            </dd>
+        </dl>
+    </div>
+</div>
+
+<div class="mt-4">
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Editar</a>
+    <a asp-action="Index" class="btn btn-secondary">Voltar para lista</a>
+</div>
+
+<style>
+    h2 {
+        color: #343a40;
+    }
+
+    .card {
+        margin-top: 20px;
+    }
+
+    .card-title {
+        margin-bottom: 20px;
+    }
+
+    .btn {
+        margin-right: 10px;
+    }
+
+    dt {
+        font-weight: bold;
+    }
+</style>

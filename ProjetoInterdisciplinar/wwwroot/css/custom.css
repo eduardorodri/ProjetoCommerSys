@@ -1,0 +1,145 @@
+﻿body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+.site-title {
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #222 !important;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.custom-container {
+    margin-left: 35px !important;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+main {
+    padding: 40px 0;
+}
+
+.intro {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.departments {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.department {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: calc(50% - 40px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+    .department h3 {
+        margin-top: 0;
+    }
+
+.custom-footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.about-container {
+    padding: 2rem 0;
+}
+
+    .about-container h1,
+    .about-container h2 {
+        font-family: 'Arial', sans-serif;
+        color: #2c3e50;
+    }
+
+    .about-container p.lead {
+        font-size: 1.45rem !important;
+        color: #34495e;
+    }
+
+    .about-container .rounded-circle {
+        width: 150px;
+        height: 150px;
+    }
+
+.about-image {
+    max-width: 100%;
+    height: auto;
+}
+
+
+.rounded-circle {
+    width: 150px !important;
+    height: 150px !important;
+    border-radius: 50%;
+    object-fit: cover !important;
+}
+
+.img-rounded {
+    border-radius: 10px;
+}
+
+.text-background {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: -10px;
+}
+
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+
+    70%, 100% {
+        width: 100%;
+    }
+    
+}
+
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: black;
+    }
+}
+
+.site-title {
+    display: inline-block;
+    overflow: hidden;
+    border-right: .15em solid black; 
+    white-space: nowrap;
+    letter-spacing: .15em;
+    animation: typing 6s steps(40, end) 1s infinite, blink-caret .75s step-end infinite; 
+}
+
+
+
+
+
+
+

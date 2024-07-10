@@ -1,0 +1,81 @@
+﻿@model IEnumerable<ProjetoInterdisciplinar.Models.Seller>
+
+@{
+    ViewData["Title"] = "Vendedores";
+    System.Globalization.CultureInfo.CurrentCulture = new System.Globalization.CultureInfo("pt-BR");
+}
+
+<br>
+<br>
+<br>
+<br>
+<h2 class="text-center my-4">@ViewData["Title"]</h2>
+
+<p class="text-right">
+    <a asp-action="Create" class="btn btn-success mb-3">Criar novo</a>
+</p>
+
+<table class="table table-bordered table-hover">
+    <thead class="thead-light">
+        <tr class="bg-primary text-white">
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nascimento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SalarioBase)
+            </th>
+            <th class="text-center">Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @item.Nascimento.ToString("dd/MM/yyyy")
+                </td>
+                <td>
+                    @item.SalarioBase.ToString("C", new System.Globalization.CultureInfo("pt-BR"))
+                </td>
+                <td class="text-center">
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning btn-sm">Editar</a>
+                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info btn-sm">Detalhes</a>
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger btn-sm">Apagar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<style>
+    h2 {
+        color: #343a40;
+    }
+
+    .btn {
+        margin-right: 5px;
+    }
+
+    .table th, .table td {
+        vertical-align: middle;
+    }
+
+    .text-right {
+        text-align: right;
+    }
+
+    .text-center {
+        text-align: center;
+    }
+</style>
