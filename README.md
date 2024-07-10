@@ -42,6 +42,6 @@ dotnet ef database update
 dotnet run
 ```
 
-# Atualize as configurações do banco de dados em appsettings.json conforme necessário. 
+### Atualize as configurações do banco de dados em appsettings.json conforme necessário. 
 
 
